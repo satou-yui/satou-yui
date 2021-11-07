@@ -106,7 +106,7 @@
 ======================== */
 
 .websiteWrapper {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 /* website-view  */
@@ -214,6 +214,13 @@
 }
 .website-about__link:hover {
   color: #C7AC93;
+}
+
+.back-link {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  text-decoration: underline;
 }
 @media screen and (max-width: 999px) {
 
