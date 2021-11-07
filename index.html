@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satou Yui Portfolio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font -->
+  <link rel="stylesheet" href="https://use.typekit.net/nbm1zgu.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'bls3pey',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+</head>
+<body>
+
+  <!-- header
+  ======================== -->
+  <header class="header" id="app">
+    <!-- nav -->
+    <nav class="nav">
+      <ul class="navList">
+        <li class="navList__item"><a href="#skill">Skill</a></li>
+        <li class="navList__item"><a href="work/work.html">Work</a></li>
+        <li class="navList__item"><a href="#about">About</a></li>
+        <li class="navList__item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- hamburger -->
+    <div class="hamburger-btn" @click='ActiveBtn=!ActiveBtn'>
+      <span class="hamburger-btn-line hamburger-btn-line--top"
+    v-bind:class="{'hamburger-btn-line--top-active':ActiveBtn}"></span>
+      <span class="hamburger-btn-line hamburger-btn-line--middle"
+    v-bind:class="{'hamburger-btn-line--middle-active':ActiveBtn}"></span>
+      <span class="hamburger-btn-line hamburger-btn-line--bottom"
+    v-bind:class="{'hamburger-btn-line--bottom-active':ActiveBtn}"></span>
+    </div>
+    <transition name="menu">
+      <nav class="hamburger-btn-menu" v-show="ActiveBtn">
+        <ul class="hamburger-btn-menu--list">
+          <li class="hamburger-btn-menu--list--item" @click='ActiveBtn=!ActiveBtn'><a href="#skill">Skill</a></li>
+          <li class="hamburger-btn-menu--list--item" @click='ActiveBtn=!ActiveBtn'><a href="work/work.html">Work</a></li>
+          <li class="hamburger-btn-menu--list--item"　@click='ActiveBtn=!ActiveBtn'><a href="#about">About</a></li>
+          <li class="hamburger-btn-menu--list--item" @click='ActiveBtn=!ActiveBtn'><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </transition>
+    <h1 class="header__logo">
+      <span class="header__logo--color">Sa</span>tou Yui
+    </h1>
+    <h1 class="header__logo header__logo--bottom">
+      portfolio
+    </h1>
+      <div class="scrolldown1"><span>Scroll</span></div>
+    
+  </header>
+  <main>
+
+    <!-- Skill
+    ======================== -->
+    <section id="skill" class="contentsWrapper contentsWrapper--skill">
+      <h2 class="contentsHeading">
+        <span class="contentsHeading__jaText">できること</span>
+        <span class="contentsHeading__engText">Skill</span>
+      </h2>
+
+      <div class="skillWrapper">
+        <div class="skillContents">
+          <h3 class="skillContents__title">Webデザイン</h3>
+          <figure class="skillContents__img"><img class="skillContents__img--design" src="images/design02.png"></figure>
+          <div class="skillContents__text">
+            <p class="skillContents__text__desc">
+              Photoshop,Illustrator,XDを使用しWebサイトのデザインの作成が可能です。
+            </p>
+            <p class="skillContents__text__desc skillContents__text__desc--design">
+              可愛いデザインが好きです。
+            </p>
+            <div class="skillContents__text__icon">
+              <img src="images/ps.png" alt="Photoshop">
+              <img src="images/ai.png" alt="Illustrator">
+              <img src="images/xd.png" alt="XD">
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="skillContents">
+          <h3 class="skillContents__title">コーディング</h3>
+          <figure class="skillContents__img"><img class="skillContents__img--coding" src="images/pc.png"></figure>
+          <div class="skillContents__text">
+            <p class="skillContents__text__desc">
+              HTML,CSS,SASS,BEMを用いたコーディングが可能です。JavaScript等で動きをつけることも可能です。
+            </p>
+            <p class="skillContents__text__desc skillContents__text__desc--coding">
+              GitHub,Gulp,FLOCSSは現在勉強中です。
+            </p>
+            <div class="skillContents__text__icon">
+              <img src="images/html.png" alt="html5">
+              <img src="images/css.png" alt="css3">
+              <img src="images/sass.png" alt="sass">
+              <img src="images/javaScript.png" alt="javaScript">
+              <img src="images/jquery.png" alt="jquery">
+              <img src="images/vue.png" alt="vue">
+              <img src="images/github.png" alt="github">
+              <img src="images/gulp.png" alt="gulp">
+            </div>
+          </d>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Work
+    ======================== -->
+    <section id="work" class="contentsWrapper contentsWrapper--work">
+      <h2 class="contentsHeading">
+        <span class="contentsHeading__jaText">さくひん</span>
+        <span class="contentsHeading__engText">Work</span>
+      </h2>
+
+      <div class="workWrapper">
+        <div class="workCard"> 
+          <a class="workCard__img" href="work/cafe.html">
+            <img src="images/cafe.png" alt="cafesite"></a>
+          <p class="wrakCard__desc">
+            求職者支援訓練での２ヶ月目課題<br>
+            「Only Cafe」
+          </p>
+        </div>
+
+        <div class="workCard">
+          <a class="workCard__img" href="work/aquarium.html">
+            <img src="images/aquarium.png" alt="aquariumsite">
+          </a>
+          <p class="wrakCard__desc">
+            求職者支援訓練での3ヶ月目課題<br>
+            「ユートピア水族館」
+          </p>
+        </div>
+
+        <div class="workCard" href="work/flower.html">
+          <a class="workCard__img" href="work/aquarium.html">
+            <img src="images/flower.png" alt="flowersite">
+          </a>
+          <p class="wrakCard__desc">
+            10月自己学習作品<br>
+            「お花の定期便　Lilian」
+          </p>
+        </div>
+
+        <div class="workCard">
+          <a class="workCard__img" href="work/todo.html">
+            <img src="images/todo.png" alt="todosite">
+          </a>
+          <p class="wrakCard__desc">
+            Vue.js練習作品<br>
+            「Todo List」
+          </p>
+        </div>
+
+        <div class="workCard">
+          <a class="workCard__img" href="work/logo.html">
+            <img src="images/logo.PNG" alt="logo">
+          </a>
+          <p class="wrakCard__desc">
+            ロゴデザイン
+          </p>
+        </div>
+
+        <div class="workCard workCard--more">
+          <a href="work/work.html"> 
+          <img src="images/bear.png" alt="more"></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About
+    ======================== -->
+    <section id="about" class="contentsWrapper contentsWrapper--about">
+      <h2 class="contentsHeading">
+        <span class="contentsHeading__jaText">わたしのこと</span>
+        <span class="contentsHeading__engText">About</span>
+      </h2>
+      <div class="aboutWrapper">
+        <figure class="aboutContents--img">
+          <img src="images/about.JPG" alt="about">
+        </figure>
+
+        <div class="aboutContents--text ">
+          <p class="aboutContents__profile">
+            <ruby>
+              佐藤　唯
+              <rt>さとう　ゆい</rt>
+            </ruby>
+            <span>
+              (23歳)
+            </span>
+          </p>
+          <p class="aboutContents__profile">
+            1998/09/14　乙女座　B型
+          </p>
+          <p class="aboutContents__profile aboutContents__profile--margin">
+            趣味：音楽鑑賞　友達と話すこと
+          </p>
+          <p class="aboutContents__profile">
+            高校を卒業後、地元旭川で就職。
+          </p>
+          <p class="aboutContents__profile">
+            ４年間働いたのち、小さい頃から身近だったWebサイトの仕事に興味を持ち退職し、札幌に引っ越しをし、求職者支援訓練にてWebデザイン、コーディングを学ぶ。
+          </p>
+          <p class="aboutContents__profile">
+            現在HTMLコーダーを目指し勉強中です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact
+    ======================== -->
+    <section id="contact" class="contentsWrapper contentsWrapper--contact">
+      <h2 class="contentsHeading">
+        <span class="contentsHeading__jaText">お問い合わせ</span>
+        <span class="contentsHeading__engText">Contact</span>
+      </h2>
+
+      <div class="contactWrapper">
+        <div class="contactWrapper__letter">
+          <a  class="contactWrapper__letter--email" href="mailto:satou.yui021@gmail.com">satou.yui021@gmail.com</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- footer
+  ======================== -->
+  <footer class="footer">
+    <p class="copy">
+      <small>©︎2021,Satou Yui</small>
+    </p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Only Cafe</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <script src="js/lazysizes.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="title">
+        <h1 class="title__logo"><a href="index.html"><img src="img/top02.PNG" alt="Only cafe" ></a></h1>
+        <nav class="nav">
+          <ul class="navList">
+            <li class="navList__item"><a href="#">Concept</a></li> 
+            <li class="navList__item"><a href="#">News</a></li>
+            <li class="navList__item"><a href="menu.html">Menu</a></li>
+            <li class="navList__item navList__item--last"><a href="#">Access</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__subTitle">
+        <h2 class="header__subTitle__text">Menu</h2>
+      </div>
+    </header>
+    <!-- パンくずリスト -->
+      <ol class="pankuzulist">
+        <li class="pankuzulist__item"><a href="index.html">TOP</a></li>
+        <li class="pankuzulist__item pankuzulist__item--last">Menu</li>
+      </ol>
+    <main>
+      <!-- menu -->
+      <section id="menu" class="contentsWrapper__menu">
+        <h2 class="contentsHeading">
+          <span class="contentsHeading__engText">Menu</span>
+          <span class="contentsHeading__jaText">メニュー</span>
+        </h2>
+          <div class="menuWrapper">
+            <h3 class="menuHeading"> DRINK</h3>
+            <div class="menuContents">
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-10">
+                  <figure><img data-src="img/milk02.jpeg" alt="coffee" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title">HOT・ICE</p>
+                  <ul class="menuItemContent__list">
+                    <li class="menuItemContent__list__item">オリジナルコーヒー</li>
+                    <li class="menuItemContent__list__item">オリジナルカフェオレ</li>
+                    <li class="menuItemContent__list__item">紅茶（ストレート・ミルク）</li>
+                    <li class="menuItemContent__list__item">ココア</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="menuItem"> 
+                <div class="menuItem__img box-fadein lazyload" data-expand="-90">
+                  <figure><img data-src="img/juice.jpeg" alt="juice" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title">ICE</p>
+                <ul class="menuItemContent__list">
+                  <li class="menuItemContent__list__item">自家製フレッシュジュース</li>
+                  <li class="menuItemContent__list__item">オレンジジュース</li>
+                  <li class="menuItemContent__list__item">りんごジュース</li>
+                  <li class="menuItemContent__list__item">クリームソーダ</li>
+                </ul>
+                </div>
+              </div>
+
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-240">
+                  <figure><img data-src="img/takeout.jpeg" alt="takeout" class="lazyload"></figure>
+                </div>
+                <div class="menuItem__takeout">
+                  <p class="menuItem__takeout__text">ドリンクはテイクアウトも出来ます！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menuWrapper">
+            <h3 class="menuHeading">FOOD</h3>
+            <div class="menuContents">
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-10">
+                  <figure><img data-src="img/pasta.jpeg" alt="pasta" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title">パスタ</p>
+                  <ul class="menuItemContent__list">
+                    <li class="menuItemContent__list__item">日替わりパスタ</li>
+                    <li class="menuItemContent__list__item">ミートパスタ</li>
+                    <li class="menuItemContent__list__item">カルボナーラ</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-90">
+                  <figure><img data-src="img/salad.jpeg" alt="salada" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title">サラダ</p>
+                  <ul class="menuItemContent__list">
+                    <li class="menuItemContent__list__item">チョップドサラダ</li>
+                    <li class="menuItemContent__list__item">シーフードサラダ</li>
+                    <li class="menuItemContent__list__item">シーザーサラダ</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-240">
+                  <figure><img data-src="img/sandwich.jpeg" alt="sandwich" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title">サンドウィッチ</p>
+                  <ul class="menuItemContent__list">
+                    <li class="menuItemContent__list__item">BLTサンド</li>
+                    <li class="menuItemContent__list__item">たまごサンド</li>
+                    <li class="menuItemContent__list__item">フルーツサンド</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menuWrapper">
+            <h3 class="menuHeading">SWEETS</h3>
+            <div class="menuContents">
+
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-30">
+                  <figure><img data-src="img/puding.jpeg" alt="puding" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title menuItemContent__title--thin">プリン</p>
+                </div>
+              </div>
+
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-210">
+                  <figure><img data-src="img/hotcake.jpeg" alt="hotcake" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title menuItemContent__title--thin">パンケーキ</p>
+                </div>
+              </div>
+
+              <div class="menuItem">
+                <div class="menuItem__img box-fadein lazyload" data-expand="-360">
+                  <figure><img data-src="img/scone.jpeg" alt="scone" class="lazyload"></figure>
+                </div>
+                <div class="menuItemContent">
+                  <p class="menuItemContent__title menuItemContent__title--thin">スコーン</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer" >
+      <p class="footer__copy"><small>©︎ Only cafe</small></p>
+  </footer>
+  </div>
+</body>
+</html>

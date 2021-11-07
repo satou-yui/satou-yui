@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>vue todo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <header class="header">
+    <h2 class="header__logo"><img src="images/title-logo.PNG" alt="logo画像"></h2>
+  </header>
+  <main id="app" class="main">
+    <div class="tag">
+      <ul class="tag__list">
+        <li 
+          class="tag__list__item tag01"
+          :class="{selectedTag: tagStatus === 'all'}"
+          @click="chengeTagStatus('all')"
+        >
+          <span class="tag-text01">全て</span>
+        </li>
+        <li
+          class="tag__list__item tag02"
+          :class="{selectedTag: tagStatus === 'wip'}"
+          @click="chengeTagStatus('wip')"
+        >
+          <span class="tag-text02">進行</span>
+        </li>
+        <li
+          class="tag__list__item tag03"
+          :class="{selectedTag: tagStatus === 'pending'}"
+          @click="chengeTagStatus('pending')"
+        >
+          <span class="tag-text03">保留</span>
+        </li>
+        <li
+          class="tag__list__item tag04"
+          :class="{selectedTag: tagStatus === 'done'}"
+          @click="chengeTagStatus('done')"
+        >
+          <span class="tag-text04">完了</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <div class="container">
+        <ul class="bg_checkbox">
+          <li class="bg_checkbox__item" v-for="(todo,index) in filteredTodos">
+            <input
+              type="checkbox"
+              v-model="todo.status"
+              true-value="done"
+              false-value="wip"
+            >
+              <div class="text-box">
+                <span class="text":class="{done: todo.status === 'done'}">{{ todo.title }}</span>
+                <select name="status" class="text-status" v-model="todo.status">
+                  <option value="wip">進行中</option>
+                  <option value="pending">保留</option>
+                  <option value="done">完了</option>
+                </select>
+                <span @click="deleteItem(index)" class="delete"><img src="images/delete-icon.PNG" alt="delete-icon"></span>
+              </div>
+            </li>
+        </ul>
+
+        <form @submit.prevent="addItem"> 
+          <input type="text" size=0 class="text-field" v-model="newItem" placeholder="タスクを入力"> 
+          <select name="status" class="form-select" v-model="status">
+            <option value="wip">進行中</option>
+            <option value="pending">保留</option>
+            <option value="done">完了</option>
+          </select>
+        
+          <input type="submit" value="追加"class="btn">
+        </form>
+        
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.wave {
+    position:relative;
+    height:90px;/*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+    
+  }
+canvas {
+  position: absolute;
+  bottom: -1px;
+  left:0;
+  width: 100%;
+}

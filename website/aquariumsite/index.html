@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ユートピア水族館</title>
+  <meta name="description" content="いつもの世界と別の世界をみてみよう。中島公園「ユートピア水族館」" />
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/wave.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  
+  <!-- font awesome -->
+  <link rel="stylesheet" 
+  href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+  integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+  crossorigin="anonymous">
+
+  <!-- Adobe font -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'gpf6azb',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'bls3pey',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <!--header
+  ================================ -->
+  <header class="header">
+    
+    <!-- logo -->
+    <h1 class="header__logo">
+      <span class="header__logo__catchcopy">
+        いつもと違う体験をしよう
+      </span>
+      <span class="header__logo__title">
+        ユートピア水族館
+        <svg class="header__logo__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 726 90">
+          <path id="pass_2" data-name="pass_2" d="M647.5,652.9s45.739-14.047,92.373-14.047S788.212,652.9,834.031,652.9,876,638.849,923.148,638.849s51.858,14.047,99.458,14.047,43.978-14.047,90.943-14.047,52.5,14.047,96.918,14.047,40.7-14.047,80.749-14.047,79.468,14.047,79.468,14.047" transform="translate(-646.029 -633.849)" fill="none" stroke="#ffe51f" stroke-width="10"/>
+        </svg>  
+      </span>
+    </h1>
+
+    <!-- open hours -->
+    <div class="header__info">
+      <h2 class="header__info__title">
+        <i class="fas fa-clock"></i>営業時間
+      </h2>
+      <p class="header__info__hours">
+        AM 10:00 〜 PM 21:00 <br>
+        定休日：火曜日
+      </p>
+      <a class="header__info__price" href="ticket.html">Webチケットを購入</a>
+    </div>
+
+    <!-- movie -->
+    <div class="header__movie">
+      <video class="header__movie__video" poster="images/top01.png" 
+      webkit-playsinline playsinline muted autoplay loop>
+      <source src="images/top.mp4" type="video/mp4">
+      <p>動画を再生できる環境ではありません。</p>
+      </video>
+    </div>
+
+    <!-- web ticket -->
+    <a class="reserve" href="ticket.html">
+      <img src="images/top2.png" alt="">
+    </a>
+  </header>
+
+  <!--wave
+  ================================ -->
+  <div class="wave">
+    <canvas id="waveCanvas"></canvas>
+  </div>
+
+  <!--geadation
+  ================================ -->
+  <div class="gradation">
+
+    <!--nav
+    ================================ -->
+
+    <!-- g-nav -->
+    <nav class="nav">
+      <div class="nav__logo">
+        <h2 class="nav__logo__title">ユートピア水族館</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="190" height="14.049" viewBox="0 0 278.02 14.049">
+          <path id="パス_7" data-name="パス 7" d="M647.5,647.9s17.429-9.049,35.2-9.049,18.421,9.049,35.881,9.049,15.994-9.049,33.959-9.049,19.761,9.049,37.9,9.049,16.758-9.049,34.655-9.049S845.1,647.9,862.022,647.9s15.507-9.049,30.77-9.049,30.282,9.049,30.282,9.049" transform="translate(-646.344 -636.349)" fill="none" stroke="#ffe51f" stroke-width="5"/>
+        </svg>
+      </div>
+      <ul class="navList">
+        <li class="navList__item">
+          <a class="navList__item__link" href="#">
+            <img src="images/nav01.png" alt="">
+            <span class="navList__item__link__text">
+              総合案内
+            </span>
+          </a>
+        </li>
+        <li class="navList__item">
+          <a class="navList__item__link" href="#">
+            <img src="images/nav02.png" alt="">
+            <span class="navList__item__link__text">
+              生き物たち
+            </span>
+          </a>
+        </li>
+        <li class="navList__item">
+          <a class="navList__item__link" href="#">
+            <img src="images/nav03.png">
+            <span class="navList__item__link__text navList__item__link__text--size">
+              イベント<br>お知らせ
+            </span>
+          </a>
+        </li>
+        <li class="navList__item">
+          <a class="navList__item__link" href="#">
+            <img src="images/nav04.png" alt="">
+            <span class="navList__item__link__text">
+              料金・チケット
+            </span>
+          </a>
+        </li>
+        <li class="navList__item navList__item--border">
+          <a class="navList__item__link" href="#">
+            <img src="images/nav05.png" alt="">
+            <span class="navList__item__link__text">
+              アクセス
+            </span>
+          </a>
+        </li>
+      </ul>
+      <a href="ticket.html" class="nav__btn">Webチケット購入</a>
+      <a href="#" class="nav__btn">お問い合わせ</a>
+    </nav>
+    
+    <!-- hamburger button -->
+    <div class="nav--sp">
+      <div class="openbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div> <!-- nav end -->
+
+    <!--main contents
+    ================================ -->
+    <main>
+
+      <!--Important Notices
+      ================================ -->
+      <section class="important">
+        <h3 class="important__heading">
+          重要なお知らせ
+        </h3>
+        <div class="important__text">
+          <div class="important__text__heading">
+            新型コロナウイルス感染対策について
+          </div>
+          <div class="important__text__wrap">
+            <div class="important__text__wrap__title">
+              緊急事態宣言発令に伴い営業時間を下記の通り変更いたします。
+            </div>
+            <div class="important__text__wrap__date">
+              対象期間：<span>2021年8月27日(金) ～ 2021年9月12日(日)</span>
+            </div>
+            <div class="important__text__wrap__hours">
+              営業時間：AM 9:30 〜 PM21:00　→　<span>AM 10:00 〜 PM 20:00</span>
+            </div>
+          </div>
+          <ul class="important__text__list">
+            <li class="important__text__list__item">
+              入場制限を実施しております。
+            </li>
+            <li class="important__text__list__item">
+              ３歳以上の方のマスクの着用をお願いします。
+            </li>
+          </ul>
+        </div>
+      </section><!-- Important Notices end -->
+
+      <!--animalContents
+      ================================ -->
+      <section class="animalContents">
+
+        <!-- img -->
+        <div class="animalContents__topImg">
+          <img class="animalContents__topImg__pengin01" src="images/pengin-bg01.png" alt="pengin">
+          <img class="animalContents__topImg__sakana" src="images/sakana-bg01.png" alt="fish">
+          <img class="animalContents__topImg__azarashi01" src="images/azarashi-bg01.png" alt="azarashi">
+          <img class="animalContents__topImg__shirokuma" src="images/shirokuma-bg01.png" alt="shirokuma">
+          <img class="animalContents__topImg__awa-left" src="images/awa-left.png" alt="">
+    
+          <img class="animalContents__topImg__iruka" src="images/iruka-bg01.png" alt="iruka">
+          <img class="animalContents__topImg__pengin02" src="images/pengin-bg02.png" alt="pengin">
+          <img class="animalContents__topImg__kurage" src="images/kurage-bg01.png" alt="kurage">
+          <img class="animalContents__topImg__azarashi02" src="images/azarashi-bg02.png" alt="azarashi">
+          <img class="animalContents__topImg__awa-right" src="images/awa-right.png" alt="">
+        </div> <!-- img end -->
+        
+        <h2 class="animalContents__heading">ユートピア水族館の生き物たち</h2>
+        <p class="animalContents__text">
+          ユートピア水族館には<br>たくさんの<br>生き物たちが暮らしています。<br>
+          見たことのない生き物たちも<br>きっといるはず！<br>
+          ユートピア水族館で<br>
+          自分のお気に入りの生き物をみつけてみよう！
+        </p>
+    
+        <div class="btn">
+          <a href="#" class="btn__link">生き物たちを詳しく知る</a>
+        </div>
+    
+        <!-- slide -->
+        <div class="animalContents__slider">
+          <div class="animalContents__slider__wave animalContents__slider__wave--top">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1600" height="30" viewBox="0 0 1600 30" preserveAspectRatio="none">
+              <path d="M0,0 v15 q400,30 800,0 t800,0 q400,0 1600,0 v-15 Z" fill="#91D2EC"></path>
+              </svg>
+          </div>
+          <ul class="animalContents__slider__list">
+            <li class="animalContents__slider__list__item"><img src="images/seal.jpeg" alt=""></li>
+            <li class="animalContents__slider__list__item"><img src="images/dolphin.jpeg" alt=""></li>
+            <li class="animalContents__slider__list__item"><img src="images/slope.jpeg" alt=""></li>
+            <li class="animalContents__slider__list__item"><img src="images/jellyfish.jpeg" alt=""></li>
+            <li class="animalContents__slider__list__item"><img src="images/beautiful.jpeg" alt=""></li>
+          </ul>
+    
+          <div class="animalContents__slider__wave animalContents__slider__wave--bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1600" height="30" viewBox="0 0 1600 30" preserveAspectRatio="none">
+              <path d="M0,0 v15 q400,30 800,0 t800,0 q400,0 1600,0 v-15 Z" fill="#79BDDD"></path>
+            </svg>
+          </div>
+        </div>
+    
+        <div class="animalContents__bottomImg">
+          <img class="animalContents__bottomImg__kurage" src="images/kurage02-bg.png" alt="">
+          <img class="animalContents__bottomImg__kai" src="images/kai-bg.png" alt="">
+          <img class="animalContents__bottomImg__awa-left" src="images/awa-left-bm.png" alt="">
+          <img class="animalContents__bottomImg__fish" src="images/sakana02-bg.png" alt="">
+          <img class="animalContents__bottomImg__awa-right" src="images/awa-right-bm.png" alt=""> 
+        </div>
+
+        <!-- sns -->
+        <h2 class="animalContents__heading">生き物たちはいつも何してるの？</h2>
+        <div class="animalContents__sns">
+          <div class="animalContents__sns__inner animalContents__sns__inner--twitter">
+            <p class="animalContents__sns__inner__title animalContents__sns__inner__title--twitter">
+              公式Twitterで生き物たちの<span>今</span>を知る
+            </p>
+            <div class="animalContents__sns__inner__link">
+              <a class="twitter-timeline"  data-height="315" data-chrome=”noheader” 
+                href="https://twitter.com/Sapporo_PRD?ref_src=twsrc%5Etfw">
+                Tweets by Sapporo_PRD
+              </a> 
+              <script async src="https://platform.twitter.com/widgets.js"></script>
+            </div>
+          </div>
+          <div class="animalContents__sns__inner animalContents__sns__inner--youtube">
+            <p class="animalContents__sns__inner__title animalContents__sns__inner__title--youtube">
+              Youtubeで生き物たちの
+              <span>普段</span>
+              を知る
+            </p>
+            <iframe 
+              class="animalContents__sns__inner__link" height="315" 
+              src="https://www.youtube.com/embed/MFr-xzHsQWU?controls=0" title="YouTube video player" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
+          </div> 
+        </div>
+        <!-- wave -->
+        <div class="wave">
+          <canvas id="waveCanvas02"></canvas>
+        </div>
+
+      </section> <!-- animalContents end -->
+    </main> <!-- maincontents end -->
+  </div>
+
+  <!--info
+  ================================ -->
+  <section class="contentsWrapper contentsWrapper--news" id="app">
+    <h2 class="contentsWrapper__heading contentsWrapper__heading--news">
+      <span class="contentsWrapper__heading__text">イベント・お知らせ</span>
+    </h2>
+
+    <!-- img -->
+    <div class="news__img">
+      <img class="news__img__item news__img--left" src="images/pengin-asi-left.png" alt="pengin">
+      <img class="news__img__item news__img--right" src="images/pengin-asi-right.png" alt="pengin">
+    </div>
+    
+    <!-- Tab -->
+    <ul class="newsTab">
+      <li
+        class="newsTab__item"
+        :class="{newsTabActive: active === 'event'}"
+        @click="clickNewsTab('event')"
+      >
+        <span
+          :class="{newsTabArrow: active === 'event'}"
+        >イベント</span>
+      </li>
+      <li
+        @click="clickNewsTab('news')"
+        class="newsTab__item"
+        :class="{newsTabActive: active === 'news'}"
+      >
+        <span
+          :class="{newsTabArrow: active === 'news'}"
+        >お知らせ</span>
+      </li>
+    </ul>
+
+    <!-- infoContents -->
+    <div
+      :class="active === 'event' ? 'eventContents'
+              : active === 'news' ? 'newsContents'
+              : ''"
+    >
+        <!-- event -->
+      <template v-if="active === 'event'">
+        <ul class="eventCard">
+          <li class="eventCard__item">
+            <a class="eventCard__item--link" href="">
+              <img src="images/baby.jpeg" alt="">
+              <div class="eventCard__item__text">
+                <div class="eventCard__item__text__heading">
+                  <div class="eventCard__item__text__heading--title">水族館デビューショー</div>
+                  <div class="eventCard__item__text__heading--date">2021.09.14 </div>
+                </div>
+                <p class="eventCard__item__text__desc">ラッコの赤ちゃん、キキちゃんの水族館デビューショーを開催します。<br>この日のためにいっぱい練習しました！</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="eventCard__item">
+            <a class="eventCard__item--link" href="">
+              <img src="images/doctor-.jpeg" alt="">
+              <div class="eventCard__item__text">
+                <div class="eventCard__item__text__heading">
+                  <div class="eventCard__item__text__heading--title">ドクターフィッシュ体験</div>
+                  <div class="eventCard__item__text__heading--date">毎日開催</div>
+              </div>
+                <p class="eventCard__item__text__desc">水槽の中に手を入れるとドクターフィッシュが寄ってきて角栓を食べてくれます！</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="eventCard__item">
+            <a class="eventCard__item--link" href="#">
+              <img src="images/pengin-eat.jpeg" alt="">
+              <div class="eventCard__item__text">
+                <div class="eventCard__item__text__heading">
+                  <div class="eventCard__item__text__heading--title">もぐもぐショー</div>
+                  <div class="eventCard__item__text__heading--date">毎週火・水曜日</div>
+                </div>
+                <p class="eventCard__item__text__desc">ペンギンにエサをあげてみよう！もぐもぐご飯を食べるペンギンたち、とってもかわいいですよ！</p>
+              </div>
+            </a>
+          </li>
+        </ul> 
+        <div class="moreContents moreContents--event">
+          <a class="moreContents__link moreContents__link--event" href="#">詳しくはこちら</a>
+        </div>
+      </template>
+
+      <!-- news -->
+      <template v-if="active === 'news'">
+        <dl class="newsContents__item">
+          <dt class="newsContents__item__date">
+            <time>2021.08.23</time>
+          </dt>
+          <dd class="newsContents__item__desc">
+            <a href="#">ゴマフアザラシ「シャータ」に関するお知らせ</a>
+          </dd>
+        </dl>
+
+        <dl class="newsContents__item">
+          <dt class="newsContents__item__date">
+            <time>2021.07.31</time>
+          </dt>
+          <dd class="newsContents__item__desc">
+            <a href="#">館内清掃のお知らせ</a>
+          </dd>
+        </dl>
+
+        <dl class="newsContents__item">
+          <dt class="newsContents__item__date">
+            <time>2021.07.14</time>
+          </dt>
+          <dd class="newsContents__item__desc">
+            <a href="#">カリフォルニアアシカの赤ちゃんの名前が決定しました！</a>
+          </dd>
+
+        </dl><dl class="newsContents__item">
+          <dt class="newsContents__item__date">
+            <time>2021.07.12</time>
+          </dt>
+          <dd class="newsContents__item__desc">
+            <a href="#">カリフォルニアアシカの赤ちゃんが誕生しました！</a>
+          </dd>
+        </dl>
+        <dl class="newsContents__item">
+          <dt class="newsContents__item__date">
+            <time>2021.05.21</time>
+          </dt>
+          <dd class="newsContents__item__desc">
+            <a href="#">シロクマの「フブキ」が死亡しました</a>
+          </dd>
+        </dl>
+        <dl class="newsContents__item newsContents__item--last">
+          <dt class="newsContents__item__date">
+            <time>2021.04.01</time>
+          </dt>
+          <dd class="newsContents__item__desc">
+            <a href="#">カリフォルニアラッコの赤ちゃんの名前が決定しました！</a>
+          </dd>
+        </dl>
+        <div class="moreContents moreContents--news">
+          <a class="moreContents__link moreContents__link--news" href="#">お知らせ一覧</a>
+        </div>
+      </template>
+    </div>
+    <div class="news__img__banner">
+      <a href="#"><img class="news__img__banner__pc" src="images/banner01.PNG" alt=""></a>
+      <a href="#"><img class="news__img__banner__sp" src="images/banner02.PNG" alt=""></a>
+    </div>
+  </section> <!-- info end -->
+
+  <!--ticket info
+  ================================ -->
+  <section class="contentsWrapper contentsWrapper--price">
+    <h2 class="contentsWrapper__heading contentsWrapper__heading--price">
+      <div class="contentsWrapper__heading__text">料金・チケット</div>
+    </h2>
+
+    <!-- price -->
+    <div class="price__contents">
+      <div class="priceTable">
+        <table class="priceTable__wrapper">
+          <tr class="priceTable__wrapper__row">
+            <th class="priceTable__wrapper__row__kinds priceTable__wrapper__row__kinds--first">チケット</th>
+            <th class="priceTable__wrapper__row__kinds">個人</th>
+            <th class="priceTable__wrapper__row__kinds">団体</th>
+            <th class="priceTable__wrapper__row__kinds">年間パスポート</th>
+          </tr>
+    
+          <tr class="priceTable__wrapper__row">
+            <th class="priceTable__wrapper__row__heading priceTable__wrapper__row__heading--age">大人</th>
+            <td class="priceTable__wrapper__row__data">1,000円</td>
+            <td class="priceTable__wrapper__row__data">900円</td>
+            <td class="priceTable__wrapper__row__data">2,500円</td>
+          </tr>
+    
+          <tr class="priceTable__wrapper__row">
+            <th class="priceTable__wrapper__row__heading priceTable__wrapper__row__heading--age">小中学生</th>
+            <td class="priceTable__wrapper__row__data">700円</td>
+            <td class="priceTable__wrapper__row__data">600円</td>
+            <td class="priceTable__wrapper__row__data">2,000円</td>
+          </tr>
+    
+          <tr class="priceTable__wrapper__row">
+            <th class="priceTable__wrapper__row__heading priceTable__wrapper__row__heading--age">幼児<span>(３歳以上)</span></th>
+            <td class="priceTable__wrapper__row__data">500円</td>
+            <td class="priceTable__wrapper__row__data">400円</td>
+            <td class="priceTable__wrapper__row__data">1,500円</td>
+          </tr>
+    
+          <tr class="priceTable__wrapper__row">
+            <th class="priceTable__wrapper__row__heading priceTable__wrapper__row__heading--age">シニア<span>(６０歳以上)</span></th>
+            <td class="priceTable__wrapper__row__data">900円</td>
+            <td class="priceTable__wrapper__row__data">800円</td>
+            <td class="priceTable__wrapper__row__data">2,300円</td>
+          </tr>
+        </table>
+        <ul class="priceTable__wrapper__supplement">
+          <li class="priceTable__wrapper__supplement__text">6歳でも小学校入学前は幼児料金です。</li>
+          <li class="priceTable__wrapper__supplement__text">３歳未満は無料です</li>
+          <li class="priceTable__wrapper__supplement__text">シニア料金の方は年齢を確認できるものをご持参ください</li>
+        </ul>
+      </div>
+
+      <!-- ticket -->
+      <div class="price__more">
+        <div class="price__more__item">
+          <div class="price__more__item__heading">団体のお客様</div>
+          <div class="price__more__item__desc">
+            <p class="price__more__item__desc__text">１０名以上のお客様に団体割引を適用しております。学校行事等にもご利用いただけます。</p>
+            <a class="price__more__item__desc__link" href="#">詳しくはこちら</a>
+          </div>
+        </div>
+
+        <div class="price__more__item">
+          <div class="price__more__item__heading">年間パスポート</div>
+          <div class="price__more__item__desc">
+            <p class="price__more__item__desc__text">1年に何度でもご入場いただけるお得な年間パスポートを販売しております。</p>
+            <a class="price__more__item__desc__link" href="#">詳しくはこちら</a>
+          </div>
+        </div>
+
+        <div class="price__more__item">
+          <div class="price__more__item__heading">Webチケット</div>
+          <div class="price__more__item__desc">
+            <p class="price__more__item__desc__text">並ばずにご購入いただけます。スマートフォン、パソコンからご購入ください。</p>
+            <a class="price__more__item__desc__link" href="ticket.html">購入はこちら</a>
+          </div>
+        </div>
+
+      <a href="#" class="price__more__ticket"><img src="images/banner.jpg" alt=""></a>
+    </div>
+  </section> <!-- ticket info end -->
+  
+  <!--access
+  ================================ -->
+  <section class="contentsWrapper contentsWrapper--access">
+    <h2 class="contentsWrapper__heading contentsWrapper__heading--access">
+      <div class="contentsWrapper__heading__text">アクセス</div>
+    </h2>
+    
+    <div class="googleMap"> 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5831.705859036765!2d141.3497018!3d43.0445258!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2a2151ea9a21%3A0x4936399cf1aafab5!2z44CSMDY0LTA5MzEg5YyX5rW36YGT5pyt5bmM5biC5Lit5aSu5Yy65Lit5bO25YWs5ZyS77yR!5e0!3m2!1sja!2sjp!4v1630637114906!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="googleMap__text">
+        <div class="googleMap__text__title">交通機関のご案内</div>
+        <div class="googleMap__text__wrapper">
+          <div class="googleMap__text__wrapper__desc">地下鉄：地下鉄南北線「中島公園駅」3番出口から 徒歩約7分 ,  地下鉄南北線「幌平橋駅」1番出口から 徒歩約7分</div>
+          <div class="googleMap__text__wrapper__desc">市電：市電「中島公園通」下車 徒歩約4分</div>
+          <div class="googleMap__text__wrapper__desc">バス：北海道中央バス、ジェイ・アール北海道バス「中島公園入口」, ジェイ・アール北海道バス「中島公園駅前」</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!--footer
+  ================================ -->
+  <footer class="footer">
+
+    <!-- nav -->
+    <ul class="footerNav">
+      <li class="footerNav__item"><a class="footerNav__item__link" href="#">会社情報</a></li>
+      <li class="footerNav__item"><a class="footerNav__item__link" href="#">動物取扱業に関する表示</a></li>
+      <li class="footerNav__item"><a class="footerNav__item__link" href="#">安心・安全への取り組み</a></li>
+      <li class="footerNav__item"><a class="footerNav__item__link" href="#">プライバシポリシー</a></li>
+      <li class="footerNav__item"><a class="footerNav__item__link" href="#">スタッフ採用情報</a></li>
+    </ul>
+
+    <!-- contents -->
+    <div class="footer__contents">
+      <div class="footer__info">
+        <div class="footer__info__logo">
+          <h3 class="footer__info__logo__title">ユートピア水族館</h3>
+          <svg class="footer__info__logo__title__border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540.341 20.785">
+            <path d="M647.5,649.635s33.97-10.785,68.6-10.785,35.9,10.785,69.932,10.785,31.173-10.785,66.185-10.785,38.514,10.785,73.866,10.785,32.661-10.785,67.542-10.785,38.992,10.785,71.98,10.785,30.224-10.785,59.971-10.785,59.019,10.785,59.019,10.785" transform="translate(-645.983 -633.85)" fill="none" stroke="#ffe51f" stroke-width="10"/>
+          </svg>
+        </div>
+        <div class="footer__info__access">
+          〒 064-0931 <i class="fas fa-phone-alt"></i>0123-456-789<br>
+          北海道札幌市中央区中島公園
+        </div>
+      </div>
+      <div class="footer__link">
+        <div class="footer__link__sns">
+          <a href="#"><img src="images/twitter.png" alt=""></a>
+          <a href="#"><img src="images/instagram.png" alt=""></a>
+          <a href="#"><img src="images/facebook.png" alt=""></a>
+        </div>
+        <div class="footer__link__inquiry">
+          <a href="#">お問い合わせはこちら</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- copy -->
+    <p class="copy"><small>© 2021 ユートピア水族館</small></p>
+  </footer> <!-- footer end -->
+
+  <script src="js/wave.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="js/vue_index.js"></script>
+</body>
+</html>

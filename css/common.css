@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+  background: #FCF8F4;
+  color: #A28B7F;
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+}
+
+/* footer
+======================== */
+
+.footer {
+  background: #C7AC93;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.copy {
+  color: #fff;
+  align-self: center;
+  font-family: m-plus-2p, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-family: 1.4em;
+  letter-spacing: 5px;
+}

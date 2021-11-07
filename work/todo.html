@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satou Yui Portfolio</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/work/common.css">
+  <link rel="stylesheet" href="../css/work/work.css">
+
+  <!-- font -->
+  <link rel="stylesheet" href="https://use.typekit.net/nbm1zgu.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'bls3pey',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header
+    ======================== -->
+    <header class="header">
+      <h1 class="header__title">
+        <img class="header__title-img" src="../images/work.PNG" alt="baar"><span class="header__title-text">Work</span>
+      </h1>
+    </header> <!-- header -->
+
+    <main class="main">
+
+      <!-- breadcrumb
+      ======================== -->
+      <div class="breadcrumb">
+        <ol class="breadcrumbList" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumbList__item"
+            itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../index.html">
+                <span itemprop="name">HOME</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+
+          <li class="breadcrumbList__item"
+            itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../work/work.html">
+                <span itemprop="name">Work</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </li>
+        
+          <li class="breadcrumbList__item"
+            itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+              <span itemprop="name">「Todo List」</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        
+        </ol>
+        <!-- next -->
+        <div class="next">
+          <a href="../work/logo.html">
+            <span>NEXT　「ロゴデザイン」
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- website
+        ======================== -->
+      <div class="websiteWrapper">
+        <!-- website-view -->
+        <section class="website-view">
+          <h2 class="website-view__heading">「Todo List」</h2>
+          <a class="website-view__img" href="../website/vue todo/index.html">
+            <img src="../images/todo_pc.png" alt="todolistsite">
+          </a>
+        </section>
+  
+        <!-- website-about -->
+        <section class="website-about">
+          <div class="website-aboutContents">
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜作品概要＞
+              </h3>
+              <p class="website-about__text--desc">
+                Vue.jsの練習のために作ったサイトです。
+              </p>
+            </div>
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜制作時間＞
+              </h3>
+              <p class="website-about__text--desc">
+                3日間
+              </p>
+            </div>
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜制作ポイント＞
+              </h3>
+              <p class="website-about__text--desc">
+                学生が使うイメージでデザインは手書き風のノートにしました。<br>
+                ロゴ、ノートのデザインは全てスマホアプリ「ibis painter」で作っています。<br>
+                進行状況がすぐわかるようにタブで状態ごとに切り替えられるようにしました。<br>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- footer
+  ======================== -->
+  <footer class="footer">
+    <p class="copy">
+      <small>©︎2021,Satou Yui</small>
+    </p>
+  </footer>
+  
+</body>
+</html>
