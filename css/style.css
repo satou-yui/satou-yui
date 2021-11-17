@@ -138,7 +138,7 @@
   left: 0;
   width: 0;
   height:100%;
-  border-bottom: 6px double #A28B7F;
+  border-bottom: 6px solid #A28B7F;
   /* border-top: 2px solid #A28B7F; */
   transition:all .5s;
   opacity: 0;
