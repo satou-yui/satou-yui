@@ -239,8 +239,8 @@
 
   .hamburger-btn-menu {
     background-color: #d5c0aee8;
-    z-index: 30;
     position: fixed;
+    z-index: 999;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -259,11 +259,7 @@
   .hamburger-btn-menu--list--item {
     line-height: 2.5;
   }
-
-
-
 }
-
 
 
 /* scrolldown */
@@ -775,7 +771,7 @@
   left: 250px;
   width: 90px;
   height: 90px;
-  z-index: 5;
+  z-index: 2;
 }
 
 @media screen and (max-width: 999px) {
@@ -862,58 +858,4 @@
 
 
 /* anime */
-.workCard{
-	opacity: 0;
-}
 
-.fadeIn{
-animation-name:fadeInAnime;
-animation-duration:1s;
-animation-fill-mode:forwards;
-opacity:0;
-}
-
-@keyframes fadeInAnime{
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.rotate{
-  animation-name:rotateYAnime;
-  animation-duration:1s;
-  animation-fill-mode:forwards;
-}
-
-@keyframes rotateYAnime{
-  from{
-    transform: rotateY(0);
-    }
-  to{
-    transform: rotateY(-360deg);
-    }
-}
-
-.flipDown{
-  animation-name:flipDownAnime;
-  animation-duration:1s;
-  animation-fill-mode:forwards;
-  opacity:0;
-  }
-  
-  @keyframes flipDownAnime{
-    from {
-      transform: perspective(2500px) rotateX(100deg);
-     opacity: 0;
-    }
-  
-    to {
-      transform: perspective(2500px) rotateX(0);
-    opacity: 1;
-    }
-  }
-  

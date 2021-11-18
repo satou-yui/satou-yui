@@ -29,8 +29,6 @@ function delayScrollAnime() {
 			$(childs).removeClass("fadeIn");//アニメーションのクラス名を削除
 			value = time;//delay初期値の数値に戻す
 		}
-
-    
 	})
 }
 
