@@ -859,3 +859,35 @@
 
 /* anime */
 
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.rotate{
+  animation-name:rotateYAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes rotateYAnime{
+  from{
+    transform: rotateY(0);
+    }
+  to{
+    transform: rotateY(-360deg);
+    }
+}
