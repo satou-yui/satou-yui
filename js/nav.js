@@ -4,4 +4,3 @@ var app = new Vue({
     ActiveBtn: false,
   }
 })
-
