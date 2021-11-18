@@ -859,3 +859,61 @@
     height: 65px;
   }
 }
+
+
+/* anime */
+.workCard{
+	opacity: 0;
+}
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.rotate{
+  animation-name:rotateYAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes rotateYAnime{
+  from{
+    transform: rotateY(0);
+    }
+  to{
+    transform: rotateY(-360deg);
+    }
+}
+
+.flipDown{
+  animation-name:flipDownAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes flipDownAnime{
+    from {
+      transform: perspective(2500px) rotateX(100deg);
+     opacity: 0;
+    }
+  
+    to {
+      transform: perspective(2500px) rotateX(0);
+    opacity: 1;
+    }
+  }
+  
