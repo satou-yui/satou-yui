@@ -1,67 +1,91 @@
-function delayScrollAnime() {
-	var time = 0.2;//遅延時間を増やす秒数の値
-	var value = time;
-	$('.delayScroll').each(function () {
-		var parent = this;					//親要素を取得
-		var elemPos = $(this).offset().top;//要素の位置まで来たら
-		var scroll = $(window).scrollTop();//スクロール値を取得
-		var windowHeight = $(window).height();//画面の高さを取得
-		var childs = $(this).children();	//子要素を取得
-		
-		if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {//指定領域内にスクロールが入ったらまた親要素にクラスplayがなければ
-			$(childs).each(function () {
-				
-				if (!$(this).hasClass("fadeIn")) {//アニメーションのクラス名が指定されているかどうかをチェック
-					
-					$(parent).addClass("play");	//親要素にクラス名playを追加
-					$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
-					$(this).addClass("fadeIn");//アニメーションのクラス名を追加
-					value = value + time;//delay時間を増加させる
-					
-					//全ての処理を終わったらplayを外す
-					var index = $(childs).index(this);
-					if((childs.length-1) == index){
-						$(parent).removeClass("play");
-					}
-				}
-			})
-		}else {
-			$(childs).removeClass("fadeIn");//アニメーションのクラス名を削除
-			value = time;//delay初期値の数値に戻す
-		}
-	})
-}
+$('#skillHeading').css('visibility','hidden');
+$('#skillContents01').css('visibility','hidden');
+$('#skillContents02').css('visibility','hidden');
+$('#workHeading').css('visibility','hidden');
+$('#workCard01').css('visibility','hidden');
+$('#workCard02').css('visibility','hidden');
+$('#workCard03').css('visibility','hidden');
+$('#workCard04').css('visibility','hidden');
+$('#workCard05').css('visibility','hidden');
+$('#workCard06').css('visibility','hidden');
+$('#aboutHeading').css('visibility','hidden');
+$('#aboutImg').css('visibility','hidden');
+$('#aboutText').css('visibility','hidden');
+$('#contactHeading').css('visibility','hidden');
+$('#contactContents').css('visibility','hidden');
 
-// 画面をスクロールをしたら動かしたい場合の記述
-	$(window).scroll(function (){
-		delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面をスクロールをしたら動かしたい場合の記述
-
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-	$(window).on('load', function(){
-		delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
-	});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+const targetPosition_skillHeading = $('#skillHeading').offset().top;
+const targetPosition_workHeading = $('#workHeading').offset().top;
+const targetPosition_aboutHeading = $('#aboutHeading').offset().top;
+const targetPosition_contactHeading = $('#contactHeading').offset().top;
 
 
+$(window).scroll(function() {
+  const windowHeight = $(window).height();
+  const topWindow = $(window).scrollTop();
 
-function fadeAnime(){
+  // skill
+  if(topWindow > targetPosition_skillHeading - windowHeight) {
+    $('#skillHeading').addClass("fadeInDown_skillHeading")
+    $('#skillContents01').addClass("fadeInDown_skillContents01")
+    $('#skillContents02').addClass("fadeInDown_skillContents02")
+  } else {
+    $('#skillHeading').removeClass("fadeInDown_skillHeading")
+    $('#skillHeading').css('visibility','hidden');
+    $('#skillContents01').removeClass("fadeInDown_skillContents01")
+    $('#skillContents01').css('visibility','hidden');
+    $('#skillContents02').removeClass("fadeInDown_skillContents02")
+    $('#skillContents02').css('visibility','hidden');
+  }
 
-    //ふわっと動くきっかけのクラス名と動きのクラス名の設定
-  $('.flipDownTrigger').each(function(){ //fadeInUpTriggerというクラス名が
-    var elemPos = $(this).offset().top-50; //要素より、50px上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight){
-    $(this).addClass('flipDown');
-    // 画面内に入ったらfadeInというクラス名を追記
-    }else{
-    $(this).removeClass('flipDown');
-    // 画面外に出たらfadeInというクラス名を外す
-    }
-  });
-}//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
-    
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function (){
-  fadeAnime();/* アニメーション用の関数を呼ぶ*/
-});//
+  // work
+  if(topWindow > targetPosition_workHeading - windowHeight) {
+    $('#workHeading').addClass("fadeInDown_workHeading")
+    $('#workCard01').addClass("fadeInDown_workCard01")
+    $('#workCard02').addClass("fadeInDown_workCard02")
+    $('#workCard03').addClass("fadeInDown_workCard03")
+    $('#workCard04').addClass("fadeInDown_workCard04")
+    $('#workCard05').addClass("fadeInDown_workCard05")
+    $('#workCard06').addClass("fadeInDown_workCard06")
+  } else {
+    $('#workHeading').removeClass("fadeInDown_workHeading")
+    $('#workHeading').css('visibility','hidden');
+    $('#workCard01').removeClass("fadeInDown_workCard01")
+    $('#workCard01').css('visibility','hidden');
+    $('#workCard02').removeClass("fadeInDown_workCard02")
+    $('#workCard02').css('visibility','hidden');
+    $('#workCard03').removeClass("fadeInDown_workCard03")
+    $('#workCard03').css('visibility','hidden');
+    $('#workCard04').removeClass("fadeInDown_workCard04")
+    $('#workCard04').css('visibility','hidden');
+    $('#workCard05').removeClass("fadeInDown_workCard05")
+    $('#workCard05').css('visibility','hidden');
+    $('#workCard06').removeClass("fadeInDown_workCard06")
+    $('#workCard06').css('visibility','hidden');
+  }
+
+  // about
+  if(topWindow > targetPosition_aboutHeading - windowHeight) {
+    $('#aboutHeading').addClass("fadeInDown_aboutHeading")
+    $('#aboutImg').addClass("fadeInDown_aboutImg")
+    $('#aboutText').addClass("fadeInDown_aboutText")
+  } else {
+    $('#aboutHeading').removeClass("fadeInDown_aboutHeading")
+    $('#aboutHeading').css('visibility','hidden');
+    $('#aboutImg').removeClass("fadeInDown_aboutImg")
+    $('#aboutImg').css('visibility','hidden');
+    $('#aboutText').removeClass("fadeInDown_aboutText")
+    $('#aboutText').css('visibility','hidden');
+  }
+
+  // contact
+  if(topWindow > targetPosition_contactHeading - windowHeight) {
+    $('#contactHeading').addClass("fadeInDown_contactHeading")
+    $('#contactContents').addClass("fadeInDown_contactContents")
+  } else {
+    $('#contactHeading').removeClass("fadeInDown_contactHeading")
+    $('#contactHeading').css('visibility','hidden');
+    $('#contactContents').removeClass("fadeInDown_contactContents")
+    $('#contactContents').css('visibility','hidden');
+  }
+})
