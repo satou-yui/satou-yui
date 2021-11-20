@@ -161,13 +161,21 @@
 }
 
 @media screen and (max-width: 729px) {
-  .nav {
-    display: none;
+  .navList {
+    justify-content: space-evenly;
+    font-size: 1em;
+  }
+  .navList__item {
+   
+    margin-right: 0;
+  }
+  .navList__item a {
+    padding: 10px 3px;
   }
 }
 
 /* hamburger */
-
+/* 
 @media screen and (max-width: 729px) {
   .hamburger-btn {
     position: fixed;
@@ -259,7 +267,7 @@
   .hamburger-btn-menu--list--item {
     line-height: 2.5;
   }
-}
+} */
 
 
 /* scrolldown */
@@ -350,14 +358,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: -999;
+  /* opacity: 0.9;
+   */
 }
 
 .contentsHeading {
   text-align: center;
   letter-spacing: 5px;
   margin: 60px 0 40px;
-  z-index: -999;
+  /* z-index: -999; */
 }
 
 .contentsHeading__engText {
@@ -405,7 +414,7 @@
 .skillWrapper {
   display: flex;
   justify-content: space-around;
-  z-index: -999;
+  
 }
 
 .skillContents {
@@ -550,12 +559,13 @@
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
-  /* z-index: -999; */
+  
 }
 
 .workCard {
   width: 285px;
   margin: 0 auto 20px ;
+  
 }
 
 .workCard--more {
@@ -577,6 +587,7 @@
   width: 240px;
   height: 240px;
   margin: 0 auto 5px;
+  
 }
 
 .workCard__img img{
@@ -586,6 +597,7 @@
   object-fit: cover;
   object-position: top;
   transition-duration: 0.5s;
+  
 }
 
 .workCard__img img:hover {
@@ -648,7 +660,7 @@
   justify-content: space-around;
   width: 80%;
   margin: 0 auto;
-  z-index: -999;
+ 
 }
 
 .aboutContents--img {
@@ -722,7 +734,7 @@
 
 .contactWrapper {
   width: 100%;
-  /* z-index: -999; */
+ 
 }
 
 .contactWrapper__letter {
