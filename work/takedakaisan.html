@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satou Yui Portfolio</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/work/common.css">
+  <link rel="stylesheet" href="../css/work/work.css">
+
+  <!-- font -->
+  <link rel="stylesheet" href="https://use.typekit.net/nbm1zgu.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'bls3pey',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+</head>
+<body>
+  <div class="wrapper">
+    <!-- header
+    ======================== -->
+    <header class="header">
+      <h1 class="header__title">
+        <img class="header__title-img" src="../images/work.PNG" alt="baar"><span class="header__title-text">Work</span>
+      </h1>
+    </header> <!-- header -->
+
+    <main class="main">
+
+      <!-- breadcrumb
+      ======================== -->
+      <div class="breadcrumb">
+        <ol class="breadcrumbList" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumbList__item"
+            itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../index.html">
+                <span itemprop="name">HOME</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+
+          <li class="breadcrumbList__item"
+            itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="../work/work.html">
+                <span itemprop="name">Work</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </li>
+        
+          <li class="breadcrumbList__item"
+            itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+              <span itemprop="name">タケダ海産</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        
+        </ol>
+        <!-- next -->
+        <div class="next">
+          <a href="../work/logo.html">
+            <span>NEXT　「ロゴデザイン」
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- website
+        ======================== -->
+      <div class="websiteWrapper">
+        <!-- website-view -->
+        <section class="website-view">
+          <h2 class="website-view__heading">「タケダ海産」</h2>
+          <a class="website-view__img" href="../website/takedakaisan/index.html" target="_blank">
+            <img src="../images/takedakaisan-pc.png" alt="takedakaisan">
+          </a>
+        </section>
+  
+        <!-- website-about -->
+        <section class="website-about">
+          <div class="website-aboutContents">
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜作品概要＞
+              </h3>
+              <p class="website-about__text--desc">
+                知人の会社のサイトのコーディングをしました。
+                デザインは職業訓練の友人にしてもらっています。<br>
+                現在実装に向け調整中です。
+                全７P。レスポンシブ対応有り
+              </p>
+            </div>
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜制作時間＞
+              </h3>
+              <p class="website-about__text--desc">
+                １週間
+              </p>
+            </div>
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜コンセプト＞
+              </h3>
+              <p class="website-about__text--desc">
+                BtoBサイトなので、見やすく、分かりやすいサイトにする。
+              </p>
+            </div>
+            <div class="website-about__text">
+              <h3 class="website-about__text--heading">
+                ＜制作ポイント＞
+              </h3>
+              <p class="website-about__text--desc">
+                Gulp,Github,Sass,FLOCSS,jQueryを使用しコーディングをしました。<br>
+                Sassではいままで@importを使っていましたが、サポート終了に伴い今回は@useを使いました。<br>
+                TOPページの事業紹介の背景はbackground-imageで実装しており、横幅に合わせて高さが変わる設定のためsectionの高さがなくならないよう、calc関数を使い高さを常に一定数の幅になるようにしています。<br>
+                なるべくcssの記述が少なくなるよう、共通部分を抜き出し、パーツ化し、スタイルを再利用しやすいcss設計を心掛けました。
+              </p>
+            </div>
+            <a class="website-about__link" href="https://github.com/satou-yui/takedakaisan" target="_brank">
+              Git hubリンク
+            </a>
+          </div>
+        </section>
+      </div>
+      <a class="back-link" href="../work/work.html">一覧に戻る</a>
+    </main>
+  </div>
+
+  <!-- footer
+  ======================== -->
+  <footer class="footer">
+    <p class="copy">
+      <small>©︎2021,Satou Yui</small>
+    </p>
+  </footer>
+  
+</body>
+</html>
