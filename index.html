@@ -48,7 +48,7 @@
     v-bind:class="{'hamburger-btn-line--bottom-active':ActiveBtn}"></span>
     </div>
     <transition name="menu">
-      <nav class="hamburger-btn-menu" v-show="ActiveBtn">
+      <nav class="hamburger-btn-menu" v-show="ActiveBtn" v-cloak>
         <ul class="hamburger-btn-menu--list">
           <li class="hamburger-btn-menu--list--item" @click='ActiveBtn=!ActiveBtn'><a href="#skill">Skill</a></li>
           <li class="hamburger-btn-menu--list--item" @click='ActiveBtn=!ActiveBtn'><a href="work/work.html">Work</a></li>
