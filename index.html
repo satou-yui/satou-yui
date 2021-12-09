@@ -39,7 +39,7 @@
     </nav>
 
     <!-- hamburger -->
-    <div class="hamburger-btn" @click='ActiveBtn=!ActiveBtn'>
+    <div class="hamburger-btn" v-on:click='ActiveBtn=!ActiveBtn'>
       <span class="hamburger-btn-line hamburger-btn-line--top"
     v-bind:class="{'hamburger-btn-line--top-active':ActiveBtn}"></span>
       <span class="hamburger-btn-line hamburger-btn-line--middle"
@@ -58,7 +58,7 @@
       </nav>
     </transition>
     <h1 class="header__logo">
-      <span class="header__logo--color">Sa</span>tou Yui
+      <span class="header__logo--color">Sato</span>u Yui
     </h1>
     <h1 class="header__logo header__logo--bottom">
       portfolio

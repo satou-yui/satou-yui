@@ -104,9 +104,7 @@
 
 /* nav */
 
-.nav {
 
-}
 
 .navList {
   display: flex;
@@ -565,7 +563,7 @@
 
 .workCard {
   width: 285px;
-  margin: 0 auto 20px ;
+  margin: 0 auto 30px ;
   
 }
 
@@ -587,9 +585,16 @@
   display: block;
   width: 240px;
   height: 240px;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
   position: relative;
   overflow: hidden;
+  transition: all .3s;
+}
+
+.workCard__img:hover {
+  transform: scale(1.02);
+  transition-duration: 0.5s;
+  
 }
 
 .workCard__img img{
@@ -608,26 +613,11 @@
 }
 
 .wrakCard__desc {
-  position: absolute;
-  color: #3f2b1f;
-  background-color:	rgba(255, 255, 255, 0.658);
-  width: 100%;
-  height: 100%;
-  /* border-radius: 50%; */
-  top: 0;
-  left: 0;
-    
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0);
-  transition: .35s ease-in-out;
+  
 }
 
 
-.workCard__img:hover .wrakCard__desc {
-  transform: scale(1);
-}
+
 
 @media screen and (max-width: 999px) {
   .workCard__img {
